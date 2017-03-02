@@ -11,6 +11,7 @@ app.get('/', function (req, res) {
 app.post('/get-file-size', upload.single('userFile'), function (req, res) {
     
     res.send({size: req.file.size});
+    //need to delete tmp files
 });
 
 app.listen(8080, function () {
